@@ -1,0 +1,25 @@
+{
+  "name": "react-native-sinch-rtc",
+  "version": "0.0.1",
+  "description": "react native module for sinch rtc on android",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:Ectsang/react-native-sinch-rtc.git"
+  },
+  "keywords": [
+    "sinch",
+    "android",
+    "react",
+    "native"
+  ],
+  "author": "Eric Tsang <tsang.eric@gmail.com> (https://twitter.com/ectsang)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Ectsang/react-native-sinch-rtc/issues"
+  },
+  "homepage": "https://github.com/Ectsang/react-native-sinch-rtc"
+}
