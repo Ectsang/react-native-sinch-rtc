@@ -21,9 +21,6 @@ import com.sinch.android.rtc.messaging.MessageClient;
 
 import java.util.List;
 
-/**
- * Created by eric on 4/22/16.
- */
 public class SinchAndroidRTCModule extends ReactContextBaseJavaModule {
 
     private ReactApplicationContext mContext;
@@ -43,13 +40,11 @@ public class SinchAndroidRTCModule extends ReactContextBaseJavaModule {
     }
 
     @ReactMethod
-    public void buildSinchClient(String applicationKey,
+    public void init(String applicationKey,
                                        String applicationSecret,
                                        String environmentHost,
-                                       String userId,
-                                       Callback callback) {
+                                       String userId) {
 
-        mCallback = callback;
         sinchClient = Sinch.getSinchClientBuilder()
                 .context(mContext)
                 .applicationKey(applicationKey)
@@ -64,7 +59,9 @@ public class SinchAndroidRTCModule extends ReactContextBaseJavaModule {
     }
 
     @ReactMethod
-    public void startSinchClient() {
+    public void startSinchClient(Callback callback) {
+        mCallback = callback;
+
         sinchClient.addSinchClientListener(new SinchClientListener() {
             public void onClientStarted(SinchClient client) {
             }
